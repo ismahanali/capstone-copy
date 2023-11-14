@@ -100,7 +100,8 @@ const Signup = () => {
         </div>
         <div className="form-holder w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
           <Form>
-            <div className="mt-4">
+            <div className="field-wrapper mt-4">
+              <div class="icon"></div>
               <label
                 class="block text-purple-700 text-md mb-2 text-left"
                 for="grid-first-name"
@@ -111,7 +112,7 @@ const Signup = () => {
                 <Field
                   type="text"
                   name="firstName"
-                  placeholder="Enter your first name"
+                  placeholder="First name"
                   className="field-class block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 <div className="text-red-600 text-xs italic">
@@ -131,7 +132,7 @@ const Signup = () => {
                 <Field
                   type="text"
                   name="lastName"
-                  placeholder="Enter your last name"
+                  placeholder="Last name"
                   className="field-class block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 <div className="text-red-600 text-xs italic">
@@ -151,7 +152,7 @@ const Signup = () => {
                 <Field
                   type="text"
                   name="username"
-                  placeholder="Enter your username"
+                  placeholder="Username"
                   className="field-class block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 <div className="text-red-600 text-xs italic">
@@ -171,7 +172,7 @@ const Signup = () => {
                 <Field
                   type="text"
                   name="phone"
-                  placeholder="Enter your phone number"
+                  placeholder="Phone"
                   className="field-class block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 <div className="text-red-600 text-xs italic">
@@ -191,7 +192,7 @@ const Signup = () => {
                 <Field
                   type="text"
                   name="email"
-                  placeholder="Enter your email"
+                  placeholder="Email"
                   className="field-class block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 <div className="text-red-600 text-xs italic">
@@ -211,7 +212,7 @@ const Signup = () => {
                 <Field
                   type={open === false ? "password" : "text"}
                   name="password"
-                  placeholder="Enter your password"
+                  placeholder="Password"
                   className="field-class block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
                 <span className="text-2xl">

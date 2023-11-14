@@ -1,7 +1,31 @@
 .field-class {
-  background-color: green;
-  height: 50px;
+  background-color: #fff;
+  height: 6rem;
 }
+.field-wrapper {
+  position: relative;
+}
+
 .form-holder {
-  width: 90rem;
+  max-width: 44rem;
+  background: none;
+}
+.form-holder label {
+  display: none;
+}
+input,
+input::-webkit-input-placeholder {
+  font-size: 25px;
+  line-height: 4;
+}
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: red;
+  padding: 4px;
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
 }
