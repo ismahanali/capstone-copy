@@ -1,7 +1,7 @@
-.sign-up-container {
-  background-color: red;
-  background-image: none;
+.field-class {
+  background-color: green;
+  height: 50px;
 }
-.sign-up-form {
-  border: 20px solid black;
+.form-holder {
+  width: 90rem;
 }

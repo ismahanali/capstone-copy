@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BeSave } from "react-icons/bs";
 import { API_BASE_URL } from "../common/constants";
 
 const frameToken = (token) => `Bearer ${token}`;
@@ -83,43 +84,73 @@ export const loginApi = async (username, password) => {
   } finally {
     return response;
   }
-
 };
 export const resetEmailLinkApi = async (emailId) => {
-    let response = frameResponse();
-    try {
-      const url = `${API_BASE_URL}/user/reset/${emailId}`;
-      const apiResponse = await axios.get(url);
-      if (apiResponse.status === 200) {
-        response = frameResponse(1);
-      }
-    } catch (err) {
-      if (err.response) {
-        response = frameResponse(0, err.response.data.message);
-      }
-      console.log(err);
-    } finally {
-      return response;
+  let response = frameResponse();
+  try {
+    const url = `${API_BASE_URL}/user/reset/${emailId}`;
+    const apiResponse = await axios.get(url);
+    if (apiResponse.status === 200) {
+      response = frameResponse(1);
     }
+  } catch (err) {
+    if (err.response) {
+      response = frameResponse(0, err.response.data.message);
+    }
+    console.log(err);
+  } finally {
+    return response;
   }
+};
 
-    export const resetPasswordApi = async (token, password) => { 
-      let response = frameResponse();
-      try {
-        const url = `${API_BASE_URL}/user/reset?password=${password}`; 
-        const headers = { headers: {Authorization: frameToken(token) } };
+export const resetPasswordApi = async (token, password) => {
+  let response = frameResponse();
+  try {
+    const url = `${API_BASE_URL}/user/reset?password=${password}`;
+    const headers = { headers: { Authorization: frameToken(token) } };
 
-        const apiResponse = await axios.post(url, null, headers);
+    const apiResponse = await axios.post(url, null, headers);
 
-        if (apiResponse.status === 200) {
-            response = frameResponse(1);
-        }
-      } catch(err) {
-          if (err.response) {
-            response = frameResponse(0, err.response.data.message);
-          }
-        console.log(err);
-      } finally {
-        return response;
-      }
+    if (apiResponse.status === 200) {
+      response = frameResponse(1);
     }
+  } catch (err) {
+    if (err.response) {
+      response = frameResponse(0, err.response.data.message);
+    }
+    console.log(err);
+  } finally {
+    return response;
+  }
+};
+
+export const getWeatherDataApi = async (token, location, save) => {
+  const url = `${API_BASE_URL}/weathers/${location}/${save}`;
+
+  const headers = {
+    headers: { Authorization: frameToken(token) },
+  };
+
+  const apiResponse = await axios.get(url, headers);
+
+  return apiResponse;
+};
+
+export const getHistoryWeatherDataApi = async (token) => {
+  let response = undefined;
+  try {
+    const url = `${API_BASE_URL}/weathers/`;
+    const headers = { headers: { Authorization: frameToken(token) } };
+    const apiResponse = await axios.get(url, headers);
+    if (apiResponse.status === 200) {
+      response = apiResponse.data;
+    }
+  } catch (err) {
+    if (err.response) {
+      response = err;
+    }
+    console.log(err);
+  } finally {
+    return response;
+  }
+};

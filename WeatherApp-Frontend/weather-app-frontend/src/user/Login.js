@@ -29,6 +29,7 @@ const Login = () => {
     if (apiResponse.status === 1) {
       appContext.setSession(payLoad);
       console.log(payLoad);
+      navigate("/");
       toast("Login successful");
     } else {
       actions.resetForm();
