@@ -8,6 +8,7 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { loginApi } from "../util/ApiUtil";
 import { AppContext } from "../Context/applicationContext";
 import { useNavigate } from "react-router-dom";
+import "./styles/Login.css";
 
 import {
   USERNAME_MIN_LENGTH,
@@ -65,21 +66,20 @@ const Login = () => {
       validationSchema={LoginSchema}
       onSubmit={onFormSubmit}
     >
-      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 b">
-        <div>
-          <img
-            alt=""
-            className="h-20 w-20"
-            src="https://cdn-icons-png.flaticon.com/512/4052/4052984.png"
-          />
-          <h3 className="text-4xl text-purple-800 font-bold text-center">
-            Welcome to Weather app
-          </h3>
+      <div className="login-container flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 b">
+        <div className="login-header-content">
+          <div>
+            <h1 className="welcome-header">Welcome to Weather App</h1>
+          </div>
+          <div>
+            <h4 className="welcome-caption">
+              Everything you need to know about weather is only one glance away
+              now!
+            </h4>
+          </div>
         </div>
-        <h4 className="text-2xl text-black-600">
-          Everything you need to know about weather is only one glance away now!
-        </h4>
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+
+        <div className="login-form-holder w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
           <Form>
             <div className="mt-4">
               <label
@@ -89,7 +89,7 @@ const Login = () => {
                 Username
               </label>
 
-              <div className="flex flex-col items-start">
+              <div className="login-field flex flex-col items-start">
                 <Field
                   type="text"
                   name="username"

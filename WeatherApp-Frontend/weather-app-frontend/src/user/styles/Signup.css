@@ -1,7 +1,16 @@
-.field-class {
-  background-color: #fff;
-  height: 6rem;
+.sign-up-container {
+  background-image: url(/src/images/background.png);
+  background-size: contain cover;
 }
+.field-class {
+  background-color: #e2eaef;
+  padding-left: 65px; /* Adjust the padding-left value based on the icon's width */
+  font-size: 25px;
+  line-height: 4;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .field-wrapper {
   position: relative;
 }
@@ -10,22 +19,29 @@
   max-width: 44rem;
   background: none;
 }
+
 .form-holder label {
   display: none;
 }
-input,
-input::-webkit-input-placeholder {
-  font-size: 25px;
-  line-height: 4;
-}
+
 .icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  background-color: red;
-  padding: 4px;
+  background-image: url(/src/images/user.png);
+  background-size: cover;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: block;
+  margin-left: 20px;
   position: absolute;
   box-sizing: border-box;
   top: 50%;
   left: 2px;
   transform: translateY(-50%);
+}
+
+field-class input,
+field-class input::-webkit-input-placeholder {
+  font-size: 30px;
+  line-height: 4;
+}
+.phone {
 }

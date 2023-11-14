@@ -1,0 +1,30 @@
+.login-container {
+  border: 10px solid green;
+  text-align: center;
+  margin-top: 10vh;
+}
+.login-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  border: 10px solid blue;
+  height: 100%;
+}
+
+.welcome-header {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  flex-wrap: wrap;
+  font-size: 45px;
+  text-wrap: wrap;
+  height: 50%;
+}
+
+.welcome-caption {
+  height: 50%;
+  font-size: 21px;
+  color: #a5afa8;
+}
