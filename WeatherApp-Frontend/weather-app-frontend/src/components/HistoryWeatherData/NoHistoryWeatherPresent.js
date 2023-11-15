@@ -3,7 +3,7 @@ import React from "react";
 const NoHistoryWeatherPresent = () => {
   return (
     <div class="flex items-center justify-center min-h-screen p-5 min-w-screen">
-      <div class="max-w-xl p-8 text-center text-indigo-900 bg-black/20 shadow-xl lg:max-w-3xl rounded-3xl lg:p-12">
+      <div class="max-w-xl p-8 text-center text-slate-100 bg-black/20 shadow-xl lg:max-w-3xl rounded-3xl lg:p-12">
         <h3 class="text-2xl font-bold">We're happy you're here. </h3>
         <div class="flex justify-center">
           <svg

@@ -15,7 +15,7 @@ const Header = (props) => {
       <nav className="flex items-center justify-between flex-wrap bg-white/30 p-6 border-b border-indigo-700 shadow-lg">
         <div className="block lg:hidden">
           <button
-            className="flex items-center px-3 py-2 border rounded text-purple-800 border-gray-900 hover:text-black hover:border-white"
+            className="flex items-center px-3 py-2 border rounded text-slate-100 border-gray-900 hover:text-black hover:border-white"
             onClick={() => setShowMenu(!showMenu)}
           >
             <svg
@@ -33,7 +33,7 @@ const Header = (props) => {
             showMenu ? "block" : "hidden"
           } lg:flex lg:items-center lg:w-auto`}
         >
-          <div className="flex items-center flex-shrink-0 text-purple-900 mr-6">
+          <div className="flex items-center flex-shrink-0 text-slate-100 mr-6">
             <Link
               className="inline-block no-underline hover:text-black font-bold text-lg py-2 px-4 lg:-ml-2"
               to="/"
@@ -43,13 +43,13 @@ const Header = (props) => {
           </div>
           <div className="text-sm lg:flex-grow">
             <Link
-              className="block mt-4 lg:inline-block lg:mt-0 font-bold text-purple-900 hover:text-black  text-lg py-2 px-4 lg:-ml-2"
+              className="block mt-4 lg:inline-block lg:mt-0 font-bold text-slate-100 hover:text-black  text-lg py-2 px-4 lg:-ml-2"
               to="/currentWeatherData"
             >
               Live Weather Data
             </Link>
             <Link
-              className="block mt-4 lg:inline-block lg:mt-0 font-bold text-purple-900 hover:text-black  text-lg py-2 px-4 lg:-ml-2"
+              className="block mt-4 lg:inline-block lg:mt-0 font-bold text-slate-100 hover:text-black  text-lg py-2 px-4 lg:-ml-2"
               to="/historyWeatherData"
             >
               History Weather Data
@@ -58,7 +58,7 @@ const Header = (props) => {
           <div>
             <Link to="/login">
               <div
-                className="inline-block no-underline text-purple-900  hover:text-black  font-bold text-lg py-2 px-4 rounded"
+                className="inline-block no-underline text-slate-100  hover:text-black  font-bold text-lg py-2 px-4 rounded"
                 onClick={() => logout()}
               >
                 Logout

@@ -41,11 +41,11 @@ const HistoryWeatherData = ({ currentUser }) => {
     );
   } else {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 mt-3">
         {results.map((item, index) => (
           <div
             key={index}
-            className="bg-black/20 text-purple-900 backdrop-blur-[80px] py-12 px-6 rounded-lg overflow-hidden"
+            className="bg-black/20 text-slate-100 backdrop-blur-[80px] py-12 px-6 rounded-[60px] overflow-hidden"
           >
             <DisplayWeatherData apiResponse={item} />
           </div>
