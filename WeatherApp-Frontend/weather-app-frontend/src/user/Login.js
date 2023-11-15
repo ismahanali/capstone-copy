@@ -81,31 +81,33 @@ const Login = () => {
 
         <div className="login-form-holder w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
           <Form>
-            <div className="mt-4">
+            <div className="field-wrapper mt-4">
+              <div class="icon"></div>
               <label
-                class="block text-purple-700 text-md mb-2 text-left"
+                class="login-field-label block text-purple-700 text-md mb-2 text-left"
                 for="grid-first-name"
               >
                 Username
               </label>
 
-              <div className="login-field flex flex-col items-start">
+              <div className="flex flex-col items-start">
                 <Field
                   type="text"
                   name="username"
                   placeholder="Enter your username"
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="login-field"
                 />
-                <div className="text-red-600 text-xs italic">
+                <div className="error-message text-red-600 text-xs italic">
                   {" "}
                   <ErrorMessage name="username" />
                 </div>
               </div>
             </div>
 
-            <div className="mt-4">
+            <div className="field-wrapper mt-4">
+              <div class="icon"></div>
               <label
-                class="block text-purple-700 text-md mb-2 text-left"
+                class="login-field-label block text-purple-700 text-md mb-2 text-left"
                 for="grid-first-name"
               >
                 Password
@@ -116,9 +118,9 @@ const Login = () => {
                   type={open === false ? "password" : "text"}
                   name="password"
                   placeholder="Enter your password"
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="login-field block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
-                <span className="text-2xl">
+                <span className="password-span text-2xl">
                   {open === false ? (
                     <AiFillEye onClick={toggle} />
                   ) : (
@@ -126,7 +128,7 @@ const Login = () => {
                   )}
                 </span>
               </div>
-              <div className="text-red-600 text-xs italic">
+              <div className="error-message text-red-600 text-xs italic">
                 {" "}
                 <ErrorMessage name="password" />
               </div>
@@ -134,27 +136,25 @@ const Login = () => {
 
             <Link
               to="/resetEmailLink"
-              className="text-xs text-purple-600 hover:underline"
+              className="text-xs text-grey-100 hover:underline"
             >
               Forgot Password?
             </Link>
-            <div className="flex items-center mt-4">
-              <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+            <div className="login-button-holder flex items-center mt-4">
+              <button className="login-button w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
                 Login
               </button>
             </div>
           </Form>
 
-          <div className="flex items-center w-full my-4">
-            <hr className="w-full" />
-            <p className="px-3 ">OR</p>
-            <hr className="w-full" />
+          <div className="or-holder flex items-center w-full my-4">
+            <p className="px-3 text-center text-orange-100 ">OR</p>
           </div>
 
-          <div className="mt-4 text-grey-600">
+          <div className="mt-4 text-orange-100">
             Dont have an account?{" "}
             <span>
-              <Link to="/signup" className="text-purple-600 hover:underline">
+              <Link to="/signup" className="text-orange-100 hover:underline">
                 Sign up
               </Link>
             </span>

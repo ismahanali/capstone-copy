@@ -10,9 +10,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(/src/images/background.png);
   background-color: #00446e;
-  background-size: contain;
+  background-size: cover contain;
   background-position: center center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  width: 100% !important;
 }
 
 code {
