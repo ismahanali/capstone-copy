@@ -7,7 +7,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(/src/images/background.png);
-  background-size: contain cover;
+  background-color: #00446e;
+  background-size: cover contain;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100% !important;
 }
 
 code {
