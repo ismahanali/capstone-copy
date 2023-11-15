@@ -1,5 +1,11 @@
 import React from "react";
-import { BsEye, BsWater, BsThermometer, BsWind } from "react-icons/bs";
+import {
+  BsEye,
+  BsWater,
+  BsThermometer,
+  BsWind,
+  BsDroplet,
+} from "react-icons/bs";
 import {
   WiCelsius,
   WiSunrise,

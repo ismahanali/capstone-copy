@@ -26,3 +26,6 @@ code {
   display: flex;
   align-items: center;
 }
+.header-container {
+  background: transparent;
+}

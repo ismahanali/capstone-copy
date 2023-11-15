@@ -12,7 +12,7 @@ const Header = (props) => {
 
   return (
     <header className="sticky top-0 z-50">
-      <nav className="flex items-center justify-between flex-wrap bg-white/30 p-6 border-b border-indigo-700 shadow-lg">
+      <nav className="header-container flex items-center justify-between flex-wrap bg-white/30 p-6 border-b border-grey-700 shadow-lg">
         <div className="block lg:hidden">
           <button
             className="flex items-center px-3 py-2 border rounded text-slate-100 border-gray-900 hover:text-black hover:border-white"
