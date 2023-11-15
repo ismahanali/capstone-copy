@@ -13,9 +13,10 @@ import { TbWorldLatitude, TbWorldLongitude } from "react-icons/tb";
 const DisplayWeatherData = ({ apiResponse }) => {
   //getting the icon from the weather response
   let iconCode = apiResponse.icon;
+  console.log(iconCode);
 
   //generating image url with the icone code
-  let iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+  let iconUrl = "http://openweathermap.org/img/wn/" + iconCode + "@4x.png";
 
   return (
     <div>
@@ -23,7 +24,7 @@ const DisplayWeatherData = ({ apiResponse }) => {
       <div className="flex items-center gap-x-5">
         {/* icon */}
         <div className="text-[87px]">
-          <img src={iconUrl} />
+          <img class="min-w-3xl animate-pulse" src={iconUrl} />
         </div>
         <div>
           {/* city name, country code */}
