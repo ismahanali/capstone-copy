@@ -22,3 +22,7 @@ code {
 #toast {
   background-color: purple;
 }
+.bottom-holder {
+  display: flex;
+  align-items: center;
+}

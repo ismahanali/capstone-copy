@@ -42,15 +42,17 @@ const HistoryWeatherData = ({ currentUser }) => {
     );
   } else {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 mt-3">
-        {results.map((item, index) => (
-          <div
-            key={index}
-            className="bg-black/20 text-slate-100 backdrop-blur-[80px] py-12 px-6 rounded-[60px] overflow-hidden"
-          >
-            <DisplayWeatherData apiResponse={item} />
-          </div>
-        ))}
+      <div className="my-20 overflow-x-auto p-4 mt-3">
+        <div className="flex space-x-5">
+          {results.map((item, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 bg-black/20 text-slate-100 backdrop-blur-[80px] py-12 px-6 rounded-[60px] overflow-hidden"
+            >
+              <DisplayWeatherData apiResponse={item} />
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

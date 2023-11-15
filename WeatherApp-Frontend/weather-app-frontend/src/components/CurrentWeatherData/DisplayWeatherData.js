@@ -37,7 +37,7 @@ const DisplayWeatherData = ({ apiResponse }) => {
       </div>
 
       {/* card body */}
-      <div className="my-20">
+      <div className="my-10">
         <div className="flex justify-center items-center">
           {/* temp */}
           <div className="text-[144px] leading-none font-light">
@@ -58,168 +58,41 @@ const DisplayWeatherData = ({ apiResponse }) => {
       </div>
 
       {/* card bottom */}
-      <div className="max-w-[378px] mx-auto flex flex-col gap-y-6">
+      <div className="my-20 text-[24px] bottom-holder max-w-[378px] mx-auto flex flex-col gap-y-6">
+        {/* Wind Speed */}
         <div className="flex justify-between">
           <div className="flex items-center gap-x-2">
-            {/* latitude icon */}
-            <div className="text-[20px]">
-              <TbWorldLatitude />
-            </div>
-            <div>
-              {/* Latitude */}
-              Latitude{" "}
-              <span className="ml-2">{apiResponse.city.latitude} </span>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-2">
-            {/* longitude icon */}
-            <div className="text-[20px]">
-              <TbWorldLongitude />
-            </div>
-            <div className="flex">
-              {/* Longitude */}
-              Longitude{" "}
-              <span className="ml-2">{apiResponse.city.longitude}</span>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-between">
-          <div className="flex items-center gap-x-2">
-            {/* Visibility icon */}
-            <div className="text-[20px]">
-              <BsEye />
-            </div>
-            <div>
-              {/* Visibility */}
-              Visibility{" "}
-              <span className="ml-2">{apiResponse.visibility / 1000} km</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
-            <div className="text-[20px]">
-              <BsThermometer />
-            </div>
-            <div className="flex">
-              {/* Feels Like */}
-              Feels like
-              <div className="flex ml-2 text-3xl">
-                {parseInt(apiResponse.feelsLike)}
-                <WiCelsius />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-between">
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
-            <div className="text-[20px]">
-              <BsWater />
-            </div>
-            <div>
-              {/* Humidity */}
-              Humidity
-              <span className="ml-2">{apiResponse.humidity} %</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
             <div className="text-[20px]">
               <BsWind />
             </div>
             <div>
-              {/* Wind Speed*/}
               Wind Speed{" "}
               <span className="ml-2">{apiResponse.windSpeed} m/s</span>
             </div>
           </div>
         </div>
+
+        {/* Humidity */}
         <div className="flex justify-between">
           <div className="flex items-center gap-x-2">
-            {/* icon */}
             <div className="text-[20px]">
-              <BsThermometer />
+              <BsDroplet />
             </div>
-            <div className="flex">
-              {/* Min Temp */}
-              Min Temp
-              <div className="flex ml-2 text-3xl">
-                {parseInt(apiResponse.tempMin)}
-                <WiCelsius />
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
-            <div className="text-[20px]">
-              <BsThermometer />
-            </div>
-            <div className="flex">
-              {/* Max Temp */}
-              Max Temp
-              <div className="flex ml-2 text-3xl">
-                {parseInt(apiResponse.tempMax)}
-                <WiCelsius />
-              </div>
+            <div>
+              Humidity <span className="ml-2">{apiResponse.humidity} %</span>
             </div>
           </div>
         </div>
+
+        {/* Visibility */}
         <div className="flex justify-between">
           <div className="flex items-center gap-x-2">
-            {/* icon */}
             <div className="text-[20px]">
-              <WiSunrise />
+              <BsEye />
             </div>
-            <div className="flex">
-              {/* Sunrise*/}
-              Sunrise
-              <div className="flex ml-2 text-1xl">
-                {new Date(apiResponse.sunrise).toLocaleTimeString()}
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
-            <div className="text-[20px]">
-              <WiSunset />
-            </div>
-            <div className="flex">
-              {/* Sunset */}
-              Sunset
-              <div className="flex ml-2 text-1xl">
-                {new Date(apiResponse.sunset).toLocaleTimeString()}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-between">
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
-            <div className="text-[20px]">
-              <WiWindDeg />
-            </div>
-            <div className="flex">
-              {/* Wind direction */}
-              Wind Direction
-              <div className="flex ml-2 text-1xl">
-                {apiResponse.windDirection}
-                <div className="text-3xl">
-                  <WiDegrees />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center gap-x-2">
-            {/* icon */}
-            <div className="text-[20px]">
-              <WiBarometer />
-            </div>
-            <div className="flex">
-              {/* Pressure */}
-              Pressure
-              <div className="flex ml-2 text-1xl">
-                {apiResponse.pressure} hPa
-              </div>
+            <div>
+              Visibility{" "}
+              <span className="ml-2">{apiResponse.visibility / 1000} km</span>
             </div>
           </div>
         </div>
