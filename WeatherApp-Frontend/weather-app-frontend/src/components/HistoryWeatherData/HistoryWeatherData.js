@@ -17,6 +17,7 @@ const HistoryWeatherData = ({ currentUser }) => {
   const getMyResults = async () => {
     setLoading(true);
     const apiResponse = await getHistoryWeatherDataApi(currentUser.token);
+    console.log(apiResponse);
     if (apiResponse && apiResponse.length > 0) {
       setResults(apiResponse);
       setData(true);
